@@ -1,6 +1,6 @@
 # multipage-vue
 
-> 多页面vue项目
+> 基于vue-cli的多页面vue项目
 
 ## Build Setup
 
