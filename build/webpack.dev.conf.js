@@ -76,6 +76,7 @@ module.exports = new Promise((resolve, reject) => {
     } else {
       // 多页面入口
       var pages =  utils.getEntry('./src/'+config.moduleName+'/**/*.html');
+      console.log(pages)
       for (var pathname in pages) {
         // 配置生成的html文件，定义路径等
         var conf = {
@@ -95,7 +96,7 @@ module.exports = new Promise((resolve, reject) => {
       // Add FriendlyErrorsPlugin
       devWebpackConfig.plugins.push(new FriendlyErrorsPlugin({
         compilationSuccessInfo: {
-          messages: [`Your application is running here: http://${devWebpackConfig.devServer.host}:${port}`],
+          messages: [`Your application is running here: http://${devWebpackConfig.devServer.host}:${port}/${config.moduleName}/first.html`],
         },
         onErrors: config.dev.notifyOnErrors
         ? utils.createNotifierCallback()

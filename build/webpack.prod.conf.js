@@ -144,6 +144,7 @@ if (config.build.bundleAnalyzerReport) {
 }
 
 var pages = utils.getEntry('./src/'+config.moduleName+'/**/*.html');
+// console.log(pages);
 console.log(chalk.yellow('提取页面中..........'));
 for (var pathname in pages) {
   console.log(chalk.green('   ' + pathname + '.html'));
